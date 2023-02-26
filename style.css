@@ -1,0 +1,42 @@
+.textbox {
+    width: 95%;
+    border: solid black 2px;
+    height: 50vh;
+    overflow: scroll;
+}
+
+.simpleHeader {
+    width: 95%;
+    background-color: lightgray;
+    border: darkslategray solid 1px;
+}
+
+.main {
+    display: flex;
+}
+
+._container1 {
+    padding: 2%;
+    width: 25%;
+}
+
+._container2 {
+    padding: 2%;
+    width: 10%;
+}
+
+._container3 {
+    padding: 2%;
+    width: 50%;
+}
+
+.input {
+    width: 95%;
+
+}
+
+.myBtn {
+    width: 7vh;
+    height: 7vh;
+    font-size: xx-large;
+}
