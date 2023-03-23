@@ -1,0 +1,79 @@
+#boom {
+    position: absolute;
+    top: 20%;
+    right: 50%;
+    width: 200px;
+    height: 200px;
+    /*background-image: url("boom.gif");*/
+    background-image: url("boom.gif");
+    background-size: cover;
+    animation:  crash 6s linear forwards;
+
+}
+
+body {
+    text-align: center;
+    padding-top: 10%;
+    /*animation: break 6s ease-in-out forwards;*/
+}
+
+button {
+    background-color: red;
+}
+
+@keyframes crash {
+    0% {
+        translate: -50vw;
+        background-image: url("comet.gif");
+    }
+    49%{
+        background-image: url("comet.gif");
+    }
+    50%{
+        translate: 0;
+        background-image: url("boom.gif");
+
+    }
+    60% {
+        translate: 0;
+        background-image: url("boom.gif");
+
+    }
+    61% {
+        background-image: none;
+    }
+    100% {
+        translate: 0;
+        background-image: none;
+    }
+    
+}
+
+@keyframes break {
+    50% {
+        rotate: 0deg;
+    }
+    52% {
+        rotate: 1deg;
+        color: red;
+    }
+    54% {
+        rotate: -1deg;
+    }
+    56% {
+        rotate: 2deg;
+    }
+    58% {
+        rotate: -2deg;
+    }
+    60% {
+        rotate: 6deg;
+        color: black;
+        background-color: black;
+    }
+    100% {
+        rotate: 6deg;
+        color: black;
+        background-color: black;
+    }
+}

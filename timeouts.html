@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="timer">running for 0 seconds</div>
+    <button id="pause_clock">stop clock</button>
+    <button id="DisplayButton">Show Div after 2 seconds</button>
+    <div id="div"  style="display: none;">
+        <button id="hide" >Hide</button>
+        <p>I am the div</p>
+    </div>
+    
+</body>
+</html>
+<script>
+
+
+
+    const DisplayBtn = document.getElementById("DisplayButton");
+    const HideBtn = document.getElementById("hide");
+    const DIV = document.getElementById("div");
+    const Pause = document.getElementById("pause_clock");
+    const Run = document.getElementById("run_clock");
+
+    DisplayBtn.addEventListener("click", () => {setTimeout(display, 2000);})
+    HideBtn.addEventListener("click", () => {setTimeout(hide, 2000);})
+    
+    const Timer = document.getElementById("timer");
+    
+    let i_id = setInterval(() => {
+        const t = parseInt(Timer.innerText.split(" ")[2]);
+        Timer.innerText = `running for ${t + 1} seconds`;
+    }, 1000)
+
+    
+    Pause.addEventListener("click", () => {
+        clearInterval(i_id);
+    })
+
+    
+    
+    const display = () => {
+        DIV.style.display = "block";
+        DisplayBtn.style.display = "none";
+    }
+
+    
+    const hide = () => {
+        DisplayBtn.style.display = "block";
+        DIV.style.display = "none";
+    }
+
+</script>
